@@ -1,0 +1,153 @@
+/* Navbarのcss  */
+.header {
+  background-color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navItem a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+  color: red;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.4s;
+}
+
+/* レスポンシブデザイン用のメディアクエリ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navList,
+  .navListOpen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .navList {
+    display: none;
+    /* メニューが閉じているときには非表示 */
+  }
+
+  .navListOpen {
+    display: flex;
+    /* メニューが開いているときに表示 */
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .navItem {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+
+/* FooterのCSS */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footerNav {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+
+.footerNav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerNav a:hover {
+  color: red;
+}
+
+
+.footerCopy {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* レスポンシブデザイン用のメディアクエリ */
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+  .footerSocial {
+    display: block;
+    /* ソーシャルリンクはメニューが閉じているときに表示 */
+  }
+
+  .footerNavOpen {
+    display: flex;
+    /* メニューが開いているときに表示 */
+  }
+}
