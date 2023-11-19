@@ -99,13 +99,20 @@ export const getSinglePost = async (slug: string) => {
 }
 
 
-// Topページ記事に取得
-export const getPostsForTopPage = async (pageSize = 6) => {
-  const allPosts = await getAllPosts();
-  // 指定された数の投稿を取得（pageSize = 6）
-  const numberOfPosts = allPosts.slice(0, pageSize)
-  return numberOfPosts;
+// // Topページ記事に取得
+// export const getPostsForTopPage = async (pageSize = 6) => {
+//   const allPosts = await getAllPosts();
+//   // 指定された数の投稿を取得（pageSize = 6）
+//   const numberOfPosts = allPosts.slice(0, pageSize)
+//   return numberOfPosts;
+// }
 
+// Topページ記事に取得
+//constantsフォルダ→constants.tsファイル作成先のNUMBER_OF_POSTS_PER_PAGEの数だけ取得
+export const getPostsForTopPage = async () => {
+  const allPosts = await getAllPosts();
+  const numberOfPosts = allPosts.slice(0, NUMBER_OF_POSTS_PER_PAGE)
+  return numberOfPosts;
 }
 
 // ページ番号に応じた記事取得
