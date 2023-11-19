@@ -2,6 +2,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import { getPostsForTopPage } from "lib/notionAPI";
 import SinglePost from "components/Post/SinglePost";
+import Link from "next/link";
 
 // Next.jsのgetStaticProps関数を使用し、ビルド時に静的なプロパティを生成
 // getStaticPropsは、ページがユーザーに表示される前に、必要なデータを事前に準備しておくための機能
@@ -48,6 +49,7 @@ export default function Home({ numberOfPosts }: any) {
             />
           ))}
         </div>
+        <Link href="/posts/page/1">...もっと見る</Link>
       </main>
     </>
   );

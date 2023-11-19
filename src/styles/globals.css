@@ -25,6 +25,10 @@
   margin-bottom: 20px;
 }
 
+.post-card:hover {
+  background-color: #eee;
+}
+
 .card-content {
   cursor: pointer;
 }
@@ -155,4 +159,37 @@
   .post-description {
     font-size: 1rem;
   }
+}
+
+
+/* ページネーションのcss */
+.pagination-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-list {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-item {
+  margin: 0 5px;
+}
+
+.pagination-link {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.pagination-link:hover {
+  background-color: #0056b3;
+  color: #fff;
 }
