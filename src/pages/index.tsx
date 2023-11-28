@@ -36,6 +36,7 @@ export default function Home({ numberOfPosts }: any) {
       </Head>
       <main>
         <h1 className="title">ブログタイトル</h1>
+
         <div className="posts-grid">
           {numberOfPosts.map((post: any) => (
             <SinglePost
